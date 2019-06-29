@@ -1,0 +1,15 @@
+Pubs
+
+#
+*.log
+*.fdb_latexmk
+*.aux
+*.fls
+*.synctex.gz
+*.nav
+*.snm
+*.toc
+*.out
+
+#
+*checkpoint.ipynb
