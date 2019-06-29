@@ -1,6 +1,6 @@
 using ThreeBodyDecay
 
-Lb2JpK = ThreeBodySystem(5.62,3.09,0.938,0.458)
+Lb2JpK = ThreeBodySystem(5.62,3.09,0.938,0.49367)
 
 using Plots
 using Interact
