@@ -1,0 +1,23 @@
+\documentclass[tikz]{standalone}
+
+% \usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+\definecolor{myGreen}{RGB}{0,127,0}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[x=1.3cm, y=0.6cm, baseline=1cm]
+    \node[coordinate] (A) at (-0.0,0) {};
+    \node[coordinate] (B) at ( 0.0,0) {};
+    \draw[scalar] (-1,-1) node[left] {$p$} -- (A);
+    \draw[scalar] (-1, 1) node[left] {$J/\psi$} -- (A);
+    \draw[scalar] (B) -- ( 1,1) node[right] {$J/\psi$};
+    \draw[scalar] (B) -- ( 1,-1) node[right] {$p$};
+    %
+    % \draw[vector] (A) -- node[above] {$P_c$} (B);
+    % \draw[black, fill=white] (A) circle (0.5ex);
+    \draw[black, fill=white] (B) circle (0.7ex);
+    % \draw [decorate,decoration={brace,amplitude=3pt}] ($(A)+(0.2,0.1)$) -- ($(B)+(0.2,-0.1)$) node [black,midway,xshift=0.3cm] {$s$};
+  \end{tikzpicture}
+\end{document}

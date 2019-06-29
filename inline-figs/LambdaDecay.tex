@@ -1,0 +1,24 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+\definecolor{myGreen}{RGB}{0,127,0}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[node distance=0.9cm and 1.3cm, baseline=1cm]
+    \coordinate[] (c0);
+    \coordinate[left=of c0,label= left:{$\Lambda_c^+, {p}_0$}] (Lamc);
+    \coordinate[above right=of c0, xshift=4mm, label=right:{${p}_1, p$}] (p);
+    \coordinate[      right=of c0, xshift=4mm, label=right:{${p}_2,\pi^+$}] (pi);
+    \coordinate[below right=of c0, xshift=4mm, label=right:{${p}_3, K^-$}] (K);
+
+    \draw[scalar]  (Lamc) --  (c0);
+    \draw[scalar]  (c0) -- (p);
+    \draw[scalar]  (c0) -- (pi);
+    \draw[scalar]  (c0) -- (K);
+
+    \draw[black, fill=white] (c0) circle (2.5ex);
+  \end{tikzpicture}
+\end{document}

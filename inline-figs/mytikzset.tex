@@ -1,0 +1,23 @@
+% mytikzset
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows,shapes}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.arrows, fadings}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{calc}
+
+\tikzset{
+  vector/.style={thick,double,draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[black,scale=0.4]{triangle 45}}}},
+  axial/.style={thick,double,densely dashed,draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[black,scale=0.4]{triangle 45}}}},
+  gluon/.style={decorate, draw=black,
+    decoration={coil,aspect=0.3,segment length=5pt,amplitude=3pt}},
+  pseudo/.style={thick, dashed, draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[red,scale=0.5]{triangle 45}}}},
+  scalar/.style={thick,draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[black,scale=0.5]{triangle 45}}}}%,
+  % pomeron/.style={thick,draw=black, postaction={decorate},
+  % decoration={zigzag,segment length=4,amplitude=.9}}
+}

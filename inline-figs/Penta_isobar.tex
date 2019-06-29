@@ -1,0 +1,27 @@
+\documentclass[tikz]{standalone}
+
+% \usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+\definecolor{myGreen}{RGB}{0,127,0}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[node distance=0.9cm and 1.3cm, baseline=1cm]
+    \coordinate[] (c0);
+    \coordinate[left=of c0,label= left:{$\Lambda_b,\Lambda$}] (Lamc);
+    \coordinate[above right=of c0, xshift=-4mm, yshift=-6mm] (c1);
+    \coordinate[above right=of c0, xshift=4mm, label=right:{$J/\psi,\,\mu$}] (Jpsi);
+    \coordinate[      right=of c0, xshift=4mm, label=right:{$p,\lambda$}] (p);
+    \coordinate[below right=of c0, xshift=4mm, label=right:{$K$}] (K);
+
+    \draw[scalar]  (Lamc) --  (c0);
+    \draw[vector]  (c0) -- node[above] {$P_c$} (c1);
+    \draw[scalar]  (c1) -- (Jpsi);
+    \draw[scalar]  (c1) -- (p);
+    \draw[scalar]  (c0) -- (K);
+
+    \fill[black] (c0) circle (1mm);
+    \fill[black] (c1) circle (1mm);
+  \end{tikzpicture}
+\end{document}

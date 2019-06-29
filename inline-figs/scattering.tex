@@ -1,0 +1,18 @@
+\documentclass[tikz]{standalone}
+
+% \usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+\definecolor{myGreen}{RGB}{0,127,0}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[x=1.3cm, y=0.6cm, baseline=1cm]
+    \draw[scalar] (-1,-1) -- (0,0);
+    \draw[scalar] (-1, 1) -- (0,0);
+    \draw[scalar] (0,0) -- ( 1,1) node[] (A) {};
+    \draw[scalar] (0,0) -- ( 1,-1) node[] (B) {};
+    \draw[black, fill=white] (0,0) circle (2.5ex) node[scale=0.9] {$A(s)$};
+    \draw [decorate,decoration={brace,amplitude=3pt}] ($(A)+(0.2,0.1)$) -- ($(B)+(0.2,-0.1)$) node [black,midway,xshift=0.3cm] {$s$};
+  \end{tikzpicture}
+\end{document}

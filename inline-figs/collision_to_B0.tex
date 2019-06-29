@@ -1,0 +1,33 @@
+\documentclass[tikz]{standalone}
+
+% \usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+
+\definecolor{cola}{rgb}{0.9,0.62,0.0}
+\definecolor{colb}{rgb}{0.337, 0.706, 0.914 }
+\definecolor{colc}{rgb}{0.0, 0.62, 0.451}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[node distance=0.9cm and 1.3cm, baseline=1cm]
+%
+    \foreach \a in {-10,-8.7,...,10} :
+      \draw[very thin, black!20!white] (0, 0) -- ({10/\a}:1.3)  ;
+    \foreach \a in {-10,-8.77,...,10} :
+      \draw[very thin, black!20!white] (0, 0) -- ({180+10/\a}:1.3);
+%
+    \draw[->,thick] (-2, 0) -- node[below] {$p$} (-0.1, 0);
+    \draw[->,thick] ( 2, 0) -- node[below] {$p$} (0.1 ,0);
+%
+    \node[coordinate] (vLb) at (0.5 ,0.5) {};
+    \draw[dashed]   ( 0, 0) -- node[above left] {$B^{0}$} (vLb);
+    \draw[] (vLb) -- (3.5, 0.7) node[right] {$\pi^+$};
+    \draw[] (vLb) -- (3.7, 0.6) node[right] {$K^-$};
+    \draw[] (vLb) -- (4.8, 0.2) node[right] {$\mu^+$};
+    \draw[] (vLb) -- (3.75, 0.1) node[right] {$\mu^-$};
+%
+    % \node[draw, star,star points=4, fill=white] at (vLb) {};
+    \draw[red!50!black] (vLb) circle (1.5mm);
+  \end{tikzpicture}
+\end{document}

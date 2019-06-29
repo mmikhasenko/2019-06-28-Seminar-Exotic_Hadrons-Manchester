@@ -1,0 +1,25 @@
+\documentclass[tikz]{standalone}
+
+% \usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+\definecolor{myGreen}{RGB}{0,127,0}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[node distance=0.9cm and 1.3cm, baseline=1cm]
+    \coordinate[] (c0);
+    \coordinate[left=of c0,label= left:{$\Lambda_b,\Lambda$}] (Lamc);
+    \coordinate[above right=of c0, xshift=4mm, label=right:{$J/\psi,\mu$}] (p);
+    \coordinate[      right=of c0, xshift=4mm, label=right:{$p,\mu$}] (pi);
+    \coordinate[below right=of c0, xshift=4mm, label=right:{$K$}] (K);
+
+    \draw[scalar]  (Lamc) -- (c0);
+    \draw[scalar]  (c0)   -- (p);
+    \draw[scalar]  (c0)   -- (pi);
+    \draw[scalar]  (c0)   -- (K);
+
+    \draw[black, fill=white] (c0) circle (2.5ex) node[scale=0.9] {$A$};
+
+  \end{tikzpicture}
+\end{document}

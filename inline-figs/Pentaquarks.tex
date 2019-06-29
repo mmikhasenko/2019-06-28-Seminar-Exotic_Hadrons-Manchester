@@ -1,0 +1,30 @@
+\documentclass[tikz]{standalone}
+
+% \usepackage{newtxtext,newtxmath}
+
+\input{mytikzset}
+
+\definecolor{cola}{rgb}{0.9,0.62,0.0}
+\definecolor{colb}{rgb}{0.337, 0.706, 0.914 }
+\definecolor{colc}{rgb}{0.0, 0.62, 0.451}
+
+\begin{document}
+\nopagecolor
+  \begin{tikzpicture}[node distance=0.9cm and 1.3cm, baseline=1cm]
+    \node[coordinate] (a) at (-1,0) {};
+    \filldraw[even odd rule,inner color=cola,outer color=white] (a) circle (1cm);
+    \draw[black,thick] (a) circle (1cm);
+    \draw[black] (a) ++(0.3,0.3) circle (4.5mm) node[] {\Large $\bar{c}$};
+    \draw[black] (a) ++(-0.4,-0.3) circle (3mm) node[] {$u$};
+    %
+    \node[coordinate] (b) at (1.1,0) {};
+    \filldraw[even odd rule,inner color=colc,outer color=white] (b) circle (1cm);
+    \draw[black,thick] (b) circle (1cm);
+    \draw[black] (b) ++(0.3,0.3) circle (4.5mm) node[] {\large $c$};
+    \draw[black] (b) ++(-0.6,0.1) circle (3mm) node[] {$u$};
+    \draw[black] (b) ++(0,-0.6) circle (3mm) node[] {$d$};
+    %
+    \foreach \x in {-0.7,-0.63,...,0.8}
+      \draw[thin,black!10!white] (0.05-\x,\x) -- (0.05+\x,\x);
+  \end{tikzpicture}
+\end{document}
